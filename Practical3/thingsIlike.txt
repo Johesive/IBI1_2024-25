@@ -1,6 +1,21 @@
-I like getting GitHub to work
-I like music
-I like pork pies
-I like crisps
-I like tea very much
-I like Radio 4
+<<<<<<< HEAD
+I like Khalil Fong very much
+=======
+I like Khalil Fong
+I don't like Kanye West
+>>>>>>> Khalil
+I like Frank Ocean
+I like Bon Iver
+I like Kendrick Lamar
+I like D'Angelo
+I like Daniel Caesar
+<<<<<<< HEAD
+I like Andre 3000
+I like F
+=======
+I like A
+I like B
+I like C
+I like D
+I like E
+>>>>>>> Khalil
