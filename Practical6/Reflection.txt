@@ -1,0 +1,11 @@
+Was it hard?
+It was sooooooo hard to write everything from the bottom!!! 
+Yet after I get help from others，I thought it was not that hard. Maybe it's because I have never been exposed to certain functions and do not know how to use it.
+
+Were there bits you enjoyed more (or less) than others?
+I enjoyed less when I try to write the infection_snippet.py myself. 
+It challenges my stupid brain. I don not write out the code x = infectedIndex[0][i],y = infectedIndex[1][i], but it should be easy to think about!
+
+What was the most important thing you learned?
+The model can really illustrate a totally different picture sometimes. At first, I thought that I had written the wrong code. However, it turns out that it was out of probability.
+If the random point is near the centre, it is likely that a picture without any green color will be found (and I do not know why!).
