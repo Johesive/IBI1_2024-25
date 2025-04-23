@@ -1,0 +1,6 @@
+Not everything went on smoothly. When I was removing the 'index.md' into my respiratory 
+'Johesive.github.io', I put it in the wrong place and I always got the result 'On branch master     
+nothing to commit, working tree clean' after typing 'git commit -m "edit"', and it bothered me
+a lot and cost me musch time to figure out what had gone wrong. Also, I wondered why when I created
+my own github.io, I needed to use 'git push origin main' instead of 'git push origin master' to
+push the changes to	GitHub. To conclude, difficulties didn't knock me down and I found it quite fun.
