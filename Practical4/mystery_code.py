@@ -1,5 +1,5 @@
 # What does this piece of code do?
-# Answer: act as two dices, and count how many times two dices will show the same number
+# Answer: This code generates two random numbers between 1 and 6, and count how many times the two numbers will show the same number (keep finding until match is found)
 
 # Import libraries
 # randint allows drawing a random number,
