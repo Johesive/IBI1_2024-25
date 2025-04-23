@@ -15,7 +15,7 @@ X = True
 Y = False
 W = X and Y
 
-# W的真值表：
+
 # X      | Y      | W
 # ----------------------
 # True   | True   | True

@@ -1,8 +1,12 @@
-weight = 67  #input weight
-height = 1.81  #input height
-BMI = weight/(height)**2  #calculate BMI according to the equation
+#input weight and height
+#calculate BMI according to the equation BMI = weight/(height)**2
+#use if-elif-else to adapt to three circumstances: BMI>30, BMI<18.5, and others
+#print the result
 
-##use if-elif-else to adapt to three circumstance
+weight = 67  
+height = 1.81  
+BMI = weight/(height)**2  
+
 
 if BMI > 30:  
     print("your BMI is", str(BMI), ", and you are categorized as obese.")#if BMI>30, obese
