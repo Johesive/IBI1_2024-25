@@ -5,8 +5,8 @@ data = {'JavaScript':62.3,'HTML':52.9,'Python':51,'SQL':51,'TypeScript':38.5}
 import matplotlib.pyplot as plt   #import matplot and NumPy
 import numpy as np
 N = 5  #the number of languages
-languages = ['JavaScript', 'HTML', 'Python', 'SQL','TypeScript']  #the names of languages
-counts = [62.3, 52.9, 51, 51, 38.5]  #the percentage of users
+languages = list(data.keys())  #the names of languages
+counts = list(data.values())  #the percentage of users
 Std = (0, 0, 0, 0, 0)  #the range of error of each language equals to 0 
 ind = np.arange(N)  #Generate position array [0, 1, 2, 3, 4]
 width = 0.35  #Width of each bar
