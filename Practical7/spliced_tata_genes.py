@@ -1,3 +1,10 @@
+#input and open files
+#divide the input into donor and acceptor sequences
+#do the same thing as the TATA_box.py, except for the target gene with both TATA box and donor/acceptor sequence
+#re.search TATA[AT]A[AT] and re.search {donor}.+{acceptor}
+#count the number of TATA boxes: len+re.findal'TATA' 
+
+
 input = input("input one of three possible splicedonor/acceptor combinations (GTAG, GCAG, ATAC)")
 
 import re

@@ -1,3 +1,12 @@
+#open files
+#remove the whitespace from the right-hand side of the string 
+#extract non-whitespace characters: gene:(\S+)
+#save to a dictionary with gene name as key and sequence as value
+#search for TATA box: re.search TATA[AT]A[AT]
+#save the target gene to a new dictionary with gene name as key and sequence as value
+#output the target gene to a new file: output.write('>'+gene_name[0]+'\n'+gene[gene_name[0]]+'\n')
+
+
 import re
 input = open('Saccharomyces_cerevisiae.R64-1-1.cdna.all.fa', 'r')
 output = open('TATA_genes.fa','w')
