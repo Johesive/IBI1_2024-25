@@ -1,3 +1,8 @@
+#do as the directions and the example code to create lists and do infection
+#if new_population[x,y]==1:new_population[x,y]=np.random.choice(range(1,3),1,p=[1-gamma,gamma])[0]    
+#plot when time step equals to 0, 25, 50, 100
+
+
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -56,7 +61,7 @@ for t in range(0,101):  #step 1 to step 100
     I.append(new_I)
     R.append(new_R)
         
-    if t == 0 or t == 25 or t == 50 or t == 100: #plot when time step equals to 0, 25, 50, 100
+    if t == 0 or t == 25 or t == 50 or t == 100:  #plot
         plt.figure(figsize=(6,4), dpi =150)
         plt.imshow(population, cmap='viridis', interpolation='nearest')
         plt.title(f'Time Step {t}')
