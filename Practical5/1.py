@@ -3,6 +3,9 @@
 #save the names of languages to the variable "languages"
 #save the percentage of users to the variable "counts"
 #draw the bar chart plt.bar(ind, counts, width, yerr=Std)
+#print the percentage of JavaScript users
+
+
 data = {'JavaScript':62.3,'HTML':52.9,'Python':51,'SQL':51,'TypeScript':38.5}
 
 #draw the bar chart
@@ -21,5 +24,4 @@ plt.xticks(ind, ('JavaScript', 'HTML', 'Python', 'SQL','TypeScript'))
 plt.yticks(np.arange(0, 110, 10))
 plt.show()
 
-#print the percentage of JavaScript users
 print(data['JavaScript'])  
