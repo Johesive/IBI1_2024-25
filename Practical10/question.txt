@@ -1,0 +1,5 @@
+Plot a boxplot of DALYs across countries in 1990.
+
+line 37-43
+
+Results: The boxplot that relects the distribution of DALYs across countries is skewed to the right, with a median of approxiamtely 41400.
