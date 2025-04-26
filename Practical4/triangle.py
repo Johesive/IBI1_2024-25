@@ -3,6 +3,7 @@
 #j = 0
 #for k in 1 to i:
 #add k to j
+#print every j
 
 for i in range(1,11): 
     j = 0    
