@@ -64,3 +64,5 @@ print(f"Mouse-Random alignment:",score_sum(seq_mouse,seq_random))
 print(f"Human-Mouse similarity:",similarity_comparison(seq_human,seq_mouse))
 print(f"Human-Random similarity:",similarity_comparison(seq_human,seq_random))
 print(f"Mouse-Random similarity:",similarity_comparison(seq_mouse,seq_random))
+
+#human and mouse sequences are most closely related
