@@ -8,6 +8,9 @@
 
 
 import re
+import os
+os.chdir('C:\Users\15041\IBI1_2024-25\Practical7')  #change directory
+
 input = open('Saccharomyces_cerevisiae.R64-1-1.cdna.all.fa', 'r')
 output = open('TATA_genes.fa','w')
 gene={}
