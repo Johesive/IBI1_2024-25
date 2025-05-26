@@ -3,7 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 
-os.chdir(r"C:\Users\15041\IBI1_2024-25\Practical10")
+os.chdir("C:\\Users\\15041\\IBI1_2024-25\\Practical10")
 dalys_data = pd.read_csv("dalys-rate-from-all-causes.csv")
 
 dalys_data.iloc[0:10,2] #the 10th year with DALYs data recorded in Afghanistan is 1999
@@ -30,6 +30,8 @@ else:
 uk = dalys_data.loc[dalys_data.Entity=="United Kingdom", ["DALYs", "Year"]]
 fr = dalys_data.loc[dalys_data.Entity=="France", ["DALYs", "Year"]]
 plt.plot(uk.Year, uk.DALYs, 'bo')
+plt.xlabel("Year")
+plt.ylabel("DALYs")
 plt.xticks(uk.Year,rotation=-90)
 plt.show() #a plot of DALYs over time in the UK
 
