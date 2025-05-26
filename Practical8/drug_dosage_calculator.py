@@ -14,9 +14,9 @@ def drug_dosage_calculator(weight, strength):
             recommended_volume = recommended_dosage/(strength/5)  
             return int(recommended_volume) 
         else:
-            print("The supplied weight is outwith the expected range.")
+            raise ValueError("The supplied weight is outwith the expected range.")
     else:
-        print("The paracetamol strength does not match an expected concentration.")  #situation when the strength is not 120 or 250
+        raise ValueError("The paracetamol strength does not match an expected concentration.")  #situation when the strength is not 120 or 250
 
 
 weight = float(input("Enter the weight in kg: "))

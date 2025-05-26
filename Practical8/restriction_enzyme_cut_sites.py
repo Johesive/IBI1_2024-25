@@ -8,12 +8,10 @@
 
 
 def restriction(DNA_sequence, recognised_sequence):
-    import re
-    canonical_nucleotides = ['A', 'C', 'G', 'T','']  #I want to use the re.split, and the output will include the space character, so I need to add it to the list of canonical nucleotides.
-    DNA_split = re.split('', DNA_sequence)
-    for nucleotides in DNA_split:
-        if nucleotides not in canonical_nucleotides:
-            raise ValueError("Invalid nucleotide found in DNA sequence")  #there is only one return, so I use a raise statement instead of a return statement.
+    canonical_nucleotides = ['A', 'C', 'G', 'T']  #I want to use the re.split, and the output will include the space character, so I need to add it to the list of canonical nucleotides.
+    for nucleotide in DNA_sequence:
+        if nucleotide not in canonical_nucleotides:
+            raise ValueError("Invalid nucleotide in DNA sequence.")  #there is only one return, so I use a raise statement instead of a return statement.
 
     DNA_length = len(DNA_sequence)
     seq_length = len(recognised_sequence)
