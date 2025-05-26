@@ -8,6 +8,9 @@
 input = input("input one of three possible splicedonor/acceptor combinations (GTAG, GCAG, ATAC)")
 
 import re
+import os
+os.chdir('C:\\Users\\15041\\IBI1_2024-25\\Practical7')  #change the directory
+
 input_file = open('Saccharomyces_cerevisiae.R64-1-1.cdna.all.fa', 'r')
 output_file = open(f'{input}_spliced_genes.fa','w')
 
