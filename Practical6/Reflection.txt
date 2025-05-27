@@ -8,4 +8,8 @@ It challenges my stupid brain. I don not write out the code x = infectedIndex[0]
 
 What was the most important thing you learned?
 The model can really illustrate a totally different picture sometimes. At first, I thought that I had written the wrong code. However, it turns out that it was out of probability.
-If the random point is near the centre, it is likely that a picture without any green color will be found (and I do not know why!).
+In SIR_vaccination.py, sometimes the graph will include less than 11 lines, while sometimes it is perfect. 
+I think it is because I use N instead of N-vaccinated to calculate the infection rate, which results in the unbelievable small infection rate in high herd immunity. Maybe the model can be optimized.
+
+At the same time, I have a little question. If vaccinated number is 100%, in the context there will be no infected people at first, but it is contradictory to the assumption that one person is affected. 
+I choose to set suscepitble number as 0 this situation, but I think we should not include 100% vaccinated people in the model anyway.

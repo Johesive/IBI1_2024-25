@@ -2,9 +2,9 @@
 #for loop: 1000 times
 #probability of infection: beta*I[-1]/N
 #probability of recovery: gamma
-#randomize: all people who is in the suspectible group is randomly given the number 0 and 1, sum it altogether and get the infected number
+#randomize: all people who is in the susceptible group is randomly given the number 0 and 1, sum it altogether and get the infected number
 #randomize: all people who is in the infected group is randomly given the number 0 and 1, sum it altogether and get the recovered number
-#new suspectible number equals to old one minus infected number
+#new susceptible number equals to old one minus infected number
 #new infected number equals to old one plus infected number and plus recovered number
 #new recovered number equals to old one plus recovered number
 #add the numbers to the list: append
@@ -15,14 +15,14 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 N = 10000
-Suspectible = N-1
+Susceptible = N-1
 Infected = 1
 Recovered = 0
 
 beta = 0.3
 gamma = 0.05
 
-S = [Suspectible]  #create the lists
+S = [Susceptible]  #create the lists
 I = [Infected]
 R = [Recovered]
 
@@ -34,11 +34,11 @@ for _ in range(1000):  #do the operation for 1000 times
     NewRecoveries = np.random.choice(range(2),I[-1],p=[1-gamma,gamma]).sum()
 #randomize the recovered number
     
-    SuspectibleEvo = S[-1] - NewInfections #new suspectible number
+    SusceptibleEvo = S[-1] - NewInfections #new suspectible number
     InfectedEvo = I[-1] + NewInfections - NewRecoveries #new infected number
     RecoveredEvo = R[-1] + NewRecoveries #new recovered number
 
-    S.append(SuspectibleEvo)  #add the numbers to the list
+    S.append(SusceptibleEvo)  #add the numbers to the list
     I.append(InfectedEvo)
     R.append(RecoveredEvo)
 

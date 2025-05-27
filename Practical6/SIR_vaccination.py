@@ -1,20 +1,22 @@
 #same as SIR.py, but with vaccinated people
-#need to print 10 different plots, each with different vaccinated number: for loop + plt.plot label=f'{i*10}% Vaccinated'
-#use new_S/I/R to avoid overwriting during updates
+#need to print 11 different plots, each with different vaccinated number: for loop + plt.plot label=f'{i*10}% Vaccinated'
+#create three lists to store the numbers of susceptible, infected, and recovered people at each time step
+#use [-1] to get the current number of people in each state
 
 
 import numpy as np
 import matplotlib.pyplot as plt
+from matplotlib import cm
 
-for i in range (0,10): #10*i% is the rate of vaccination
+for i in range (0,11): #10*i% is the rate of vaccination
     
     #There is a question. 
     #If vaccinated number is 100%, in the context there will be no infected people at first, which is contradictory to the assumption that one person is affected. 
-    #As a result, I choose to set the range as (0,10) instead of (0,11).
+    #As a result, I choose to set suscepitble number as 0 in this situation.
     
     N = 10000
     Vaccinated = 1000*i
-    Suspectible = N-Vaccinated-1
+    Susceptible = max(N-Vaccinated-1,0) #set susceptible number as 0 if vaccinated number is 100%
     Infected = 1
     Recovered = 0
     label = 10*i
@@ -22,38 +24,31 @@ for i in range (0,10): #10*i% is the rate of vaccination
     beta = 0.3
     gamma = 0.05
 
-    S = [Suspectible]  #create the lists
+    S = [Susceptible]  #create the lists
     I = [Infected]
     R = [Recovered]
 
     for _ in range(1000):  #do the operation for 1000 times
-        new_S = S.copy()  #create a copy of the population to avoid overwriting during updates
-        new_I = I.copy()
-        new_R = R.copy()
+        current_S = S[-1]  #get the current numbers
+        current_I = I[-1]
+        current_R = R[-1]
         
-        probability_of_infection = beta*I[-1]/N  #calculate probability of infection, while probability of recovery equals to gamma
+        probability_of_infection = beta*current_I/ N  #calculate probability of infection, while probability of recovery equals to gamma
 
-        NewInfections = np.random.choice(range(2),new_S[-1],p=[1-probability_of_infection,probability_of_infection]).sum()
-    #randomize the infected number
-        NewRecoveries = np.random.choice(range(2),new_I[-1],p=[1-gamma,gamma]).sum()
-    #randomize the recovered number
+        NewInfections = np.random.choice(range(2),current_S,p=[1-probability_of_infection,probability_of_infection]).sum()
+        #randomize the infected number
+        NewRecoveries = np.random.choice(range(2),current_I,p=[1-gamma,gamma]).sum()
+        #randomize the recovered number
         
-        SuspectibleEvo = new_S[-1] - NewInfections #new suspectible number
-        InfectedEvo = new_I[-1] + NewInfections - NewRecoveries #new infected number
-        RecoveredEvo = new_R[-1] + NewRecoveries #new recovered number
+        SusceptibleEvo = current_S - NewInfections #new suspectible number
+        InfectedEvo = current_I + NewInfections - NewRecoveries #new infected number
+        RecoveredEvo = current_R + NewRecoveries #new recovered number
 
-        new_S.append(SuspectibleEvo)  #add the numbers to the list
-        new_I.append(InfectedEvo)
-        new_R.append(RecoveredEvo)
-
-
-        #update new data
-        S = new_S
-        I = new_I
-        R = new_R
-
+        S.append(SusceptibleEvo)  #add the numbers to the list
+        I.append(InfectedEvo)
+        R.append(RecoveredEvo)
     #draw
-    plt.plot(new_I,label=f'{i*10}% Vaccinated')
+    plt.plot(I,label=f'{i*10}% Vaccinated', color=cm.viridis(i/10))  #use viridis colormap to differentiate the lines
 
    
 plt.xlabel("time")
